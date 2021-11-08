@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Paginita</title>
+    <link rel="shortcut icon" href="../imagenes/favicon-96x96.png">
+    <link rel="stylesheet" href="../ccs/estilo.css">
+</head>
+<body>
+    <div id="header">
+        <div id="navegacion">
+            <li><a href="../index.html">Tim Berners Lee</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="precio.html"> Tabla de precios</a></li>
+            <li><a href="#contacto.html">Contactame</a></li>
+        </div>
+        <div id= "mapa">
+            <img src="../imagenes/imagen-menu.png" alt="Mapa de navegacion" usemap="#navegacion">
+            <map name="#navegacion">
+                <area shape="rect" coords="16,44,107,131" href="../index.html">
+                <area shape="circle" coords="172,92,55" href="portfolio.html">
+                <area shape="polygon" coords="232,135,288,43,344,135" href="precio.html">
+                <area shape="rect" coords="351,33,439,140" href="#contacto.html">
+            </map>
+        </div>
+    </div>
+    <div id="main">
+        <h1>Contactame</h1>
+        <h2>Formulario de contacto</h2>
+        <form action="manejar_formulario.php" method="post">
+
+            <fieldset>
+                <legend><strong>Datos personales</strong></legend>
+                <label for="nombre"><strong>Nombre:</strong></label> <input id="nombre" placeholder="Introduce tu Nombre..." type="text" name="nombre" required>*
+                <br>
+                <label for="apellido"><strong>Apellido:</strong></label><input  id="apellido" placeholder="Introduce tu Apellido..." type="text" name="apellido"required >*
+                <br>
+                <label for="email"><strong>Email:</strong></label>  <input id="email" type="email" name="email" required>*
+                <br>
+                <label for="fecha"><strong>Fecha de Nacimiento:</strong></label> <input id="fecha" type="date" name="fecha">
+                <br>
+                <label for="edad"><strong>Edad:</strong></label> <input id="edad" type="number" name="edad" min="10" max="100" >
+                <br>
+                <strong>Sexo:</strong>
+                <input type="radio" name="sexo" id="Mujer"> <label for="mujer"><strong>Mujer</strong></label>
+                <input type="radio" name="sexo" id="Hombre"> <label for="hombre"><strong>Hombre</strong></label>
+                <br>
+                <label for="pais"><strong>País: </strong></label> <select id="pais" name="Pais" id="">
+                    <option value="hidden">- Selecciona -</option>
+                    <option value="">España</option>
+                    <option value="">Francia</option>
+                    <option value="">Portugal</option>
+                    <option value="">Italia</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Otros Datos</strong></legend>
+                <label for="mensaje"><strong>Mensaje:</strong></label> <textarea placeholder="Introduce tu mensaje..." name="Mnesaje" id="mensaje" cols="45" rows="10"></textarea>
+                <br>
+                <strong>Adjunta una foto...</strong> <input type="file">
+            </fieldset>
+            <input type="checkbox" name="Condiciones" id="checkbox"> <label for="checkbox"><strong>Hé leido las condiciones...</strong></label>
+            <br>
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar">
+        </form>
+    
+    </div>
+    <div id="content">
+        <h1>Centro de referencia</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.7795771532255!2d-16.28545688456061!3d28.45606029879603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41cceee5a8035f%3A0xab9f2a74d9e68b51!2sCIFP%20C%C3%A9sar%20Manrique!5e0!3m2!1ses!2ses!4v1636406082977!5m2!1ses!2ses" width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div id="footer">
+        <p>Ⓒ 2040 <a href=""#>www.MiSitio.com</a></p>
+    </div>
+    </body>
+    
+    </html>
